@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Form Validation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            ::placeholder{
+                color: lightcoral;;
+                font-weight: 350;
+            }
+            label{
+                font-weight: 550;
+                font-size: 17px;
+            }
+            input, select{
+                padding: 5px;
+                width: auto;
+            }
+            .main_body{
+               width: 380px;
+            }
+            .required{
+                color: lightcoral;
+                font-weight: 350;
+                float: right;
+            }
+            textarea{
+                height: 100px;
+            }
+
+            .data{
+                padding: 5px;
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="main_body">
+        <h1>Registration Form</h1>
+        <form>
+            <div class="data">
+  <label for="user_id">User ID:</label>
+  <input type="text" id="user_id" name="user_id" required minlength="5" maxlength="12" placeholder="Required, length of 5 to 12 characters" ><span class="required">Required</span>
+</div>
+<div class="data">
+  <label for="password" >Password:</label>
+  <input type="password" id="password" name="password" required minlength="7" maxlength="12" placeholder="Required, length of 7 to 12 characters"><span class="required">Required</span></div>
+<div class="data">
+  <label for="name" >Name:</label>
+  <input type="text" id="name" name="name" required pattern="[a-zA-Z ]+" placeholder="Required, letters only"><span class="required">Required</span></div>
+<div class="data">
+  <label for="address" >Address:</label>
+  <input type="text" id="address" name="address" placeholder="Optional"></div>
+<div class="data">
+  <label for="country">Country:</label> 
+  <select id="country" name="country" required>
+    <option value="">--Please select a country--</option>
+    <option value="USA">USA</option>
+    <option value="Canada">Canada</option>
+    <option value="Mexico">Mexico</option>
+    <option value="UK">UK</option>
+    <!-- Add more countries as needed -->
+  </select><span class="required"> Required</span></div>
+<div class="data">
+  <label for="zip_code">ZIP Code:</label>
+  <input type="number" id="zip_code" name="zip_code" required placeholder="Required, letters only"><span class="required">Required</span></div>
+<div class="data">
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required placeholder="Required, valid email address only"><span class="required">Required</span></div>
+<div class="data">
+  <label for="sex" >Sex:</label>
+  <input type="radio" id="male" name="sex" value="male" required>
+  <label for="male">Male</label>
+  <input type="radio" id="female" name="sex" value="female">
+  <label for="female">Female</label><span class="required"> Required</span></div>
+<div class="data">
+  <label for="language">Language:</label>
+  <input type="radio" id="english" name="language" value="english" required> 
+  <label for="english">English</label>
+  <input type="radio" id="non_english" name="language" value="non_english" required>
+  <label for="non_english">Non-English</label><span class="required"> Required</span></div>
+<div class="data">
+  <label for="about">About:</label>
+  <textarea id="about" name="about" placeholder="Optional"></textarea></div>
+<div class="data">
+  <input type="submit" value="Submit"></div>
+</form>
+
+        </div>
+        
+    </body>
+</html>
